@@ -109,7 +109,7 @@ class Trackers:
     # Training methods
     def _handle_training(self):
         """Manage GMM training process"""
-        while self.trained_iterations < self.trainingIterations:
+        if self.trained_iterations < self.trainingIterations:
             self._collect_training_data()
         else:
             self._finalize_training()
